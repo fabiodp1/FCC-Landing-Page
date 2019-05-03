@@ -18,19 +18,25 @@ header img {
       max-height: 5rem;
 }
 
+a {
+      text-decoration: none;
+}
+
+#nav-bar a, a, footer{
+      color: white;
+
+}
+
 #main-grid {
       display: grid;
-      grid-template-rows: 1fr auto;
       grid-template-columns: 1fr 4fr 1fr;
-      grid-template-areas:
-            ". m ."
-            "f f f";
       grid-row-gap: 1rem;
       padding-top: 7rem;
+      padding-bottom: 6rem;
 }
 
 main {
-      grid-area: m;
+      grid-column: 2 / 3;
       place-items: center;
       display: flex;
       flex-direction: column;
@@ -105,7 +111,12 @@ main {
 }
 
 footer {
-      grid-area: f;
+      position: fixed;
+      text-align: right;
+      background: #006402;
+      width: 100%;
+      bottom: 0;
+      left: 0;
 }
 
 @media (max-width: 768px) {
