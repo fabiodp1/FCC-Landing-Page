@@ -1,30 +1,42 @@
-#parent {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      margin: auto;
-}
-
 header {
       width: 100%;
       display: flex;
+      top: 0;
+      left: 0;
+      margin: auto;
+      position: fixed;
       justify-content: space-between;
       align-items: center;
       background: #006402;
 }
 
+body {
+      font-family: 'Gill Sans',
+            'Gill Sans MT',
+            Calibri,
+            'Trebuchet MS',
+            sans-serif;
+}
+
 header img {
-      max-height: 5rem;
+      max-height: 6rem;
+      margin-left: 2rem;
+}
+
+#nav-bar {
+      display: flex;
+      width: 20%;
+      justify-content: space-around;
 }
 
 a {
       text-decoration: none;
 }
 
-#nav-bar a, a, footer{
+#nav-bar a,
+a,
+footer {
       color: white;
-
 }
 
 #main-grid {
@@ -42,7 +54,7 @@ main {
       flex-direction: column;
 }
 
-.email {
+.email-section {
       text-align: center;
 }
 
@@ -69,7 +81,7 @@ main {
 }
 
 .icons {
-      width: 6rem;
+      width: 4.5rem;
 }
 
 #icon1 {
@@ -108,24 +120,61 @@ main {
       padding: 2rem;
       margin: 0 0.5rem;
       flex-basis: 7rem;
+      min-width: 10rem;
 }
 
 footer {
       position: fixed;
-      text-align: right;
       background: #006402;
       width: 100%;
       bottom: 0;
       left: 0;
+      padding: 5px;
+}
+
+ul {
+      display: flex;
+      justify-content: flex-end;
+}
+
+span {
+      margin-top: 0.5rem;
+      margin-right: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 0.9rem;
+}
+
+li {
+      padding: 0 1rem;
+      list-style: none;
 }
 
 @media (max-width: 768px) {
-      #products {
+      header img {
+            margin-left: 0;
+      }
+
+      #nav-bar {
+            width: 100%;
+            display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+            margin-top: -1rem;
+      }
+
+      header {
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+            padding-bottom: 1rem;
       }
 
       #products {
+            flex-direction: column;
+            align-items: center;
             margin-top: 2rem;
       }
 
